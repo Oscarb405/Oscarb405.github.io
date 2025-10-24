@@ -1,11 +1,119 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Cafetería El Aroma Dorado</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
-    <h1>Hola</h1>
+
+    <header>
+        <nav class="navbar">
+            <div class="logo">El Aroma Dorado</div>
+            <ul class="nav-links">
+                <li><a href="#hero">Inicio</a></li>
+                <li><a href="#about">Nosotros</a></li>
+                <li><a href="#menu">Menú</a></li>
+                <li><a href="#gallery">Galería</a></li>
+                <li><a href="#contact">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+        <section id="hero">
+            <div class="hero-content">
+                <h1 class="gradient-text">El Sabor que Despierta tus Sentidos</h1>
+                <p>Café de especialidad, repostería artesanal y un ambiente único.</p>
+                <a href="#menu" class="cta-button">Ver Menú</a>
+            </div>
+        </section>
+
+        <section id="about" class="hidden">
+            <h2>Nuestra Pasión</h2>
+            <div class="about-content">
+                <img src="https://picsum.photos/id/225/400/300" alt="Granos de café" class="about-image">
+                <p>En "El Aroma Dorado", creemos que el café es más que una bebida; es una experiencia. Seleccionamos a mano los mejores granos de fincas sostenibles de todo el mundo. Nuestro compromiso es tostarlo a la perfección para que disfrutes de cada matiz y aroma.</p>
+            </div>
+        </section>
+
+        <section id="menu" class="hidden">
+            <h2 class="gradient-text">Nuestro Menú</h2>
+            <div class="menu-grid">
+                <div class="menu-item hidden">
+                    <img src="https://picsum.photos/id/30/300/200" alt="Espresso">
+                    <h3>Espresso Intenso</h3>
+                    <p>Un shot concentrado de nuestro blend de la casa. Pura energía.</p>
+                    <span class="price">2.50€</span>
+                </div>
+                <div class="menu-item hidden">
+                    <img src="https://picsum.photos/id/431/300/200" alt="Cappuccino">
+                    <h3>Cappuccino Cremoso</h3>
+                    <p>Equilibrio perfecto entre espresso, leche vaporizada y espuma sedosa.</p>
+                    <span class="price">3.80€</span>
+                </div>
+                <div class="menu-item hidden">
+                    <img src="https://picsum.photos/id/1060/300/200" alt="Croissant">
+                    <h3>Croissant de Mantequilla</h3>
+                    <p>Recién horneado, hojaldrado y perfecto para acompañar tu café.</p>
+                    <span class="price">2.20€</span>
+                </div>
+                 <div class="menu-item hidden">
+                    <img src="https://picsum.photos/id/1080/300/200" alt="Tarta">
+                    <h3>Tarta de Zanahoria</h3>
+                    <p>Nuestra receta secreta con un glaseado de queso crema inolvidable.</p>
+                    <span class="price">4.50€</span>
+                </div>
+            </div>
+        </section>
+
+        <section id="gallery" class="hidden">
+            <h2>Momentos Dorados</h2>
+            <div class="gallery-grid">
+                <img src="https://picsum.photos/id/1025/400/400" alt="Perro en cafetería" class="gallery-img hidden">
+                <img src="https://picsum.photos/id/292/400/400" alt="Interior de la cafetería" class="gallery-img hidden">
+                <img src="https://picsum.photos/id/326/400/400" alt="Arte latte" class="gallery-img hidden">
+                <img src="https://picsum.photos/id/367/400/400" alt="Cliente sonriendo" class="gallery-img hidden">
+                <img src="https://picsum.photos/id/450/400/400" alt="Barista trabajando" class="gallery-img hidden">
+                <img src="https://picsum.photos/id/453/400/400" alt="Detalle de postre" class="gallery-img hidden">
+            </div>
+        </section>
+
+        <section id="contact" class="hidden">
+            <h2 class="gradient-text">Visítanos</h2>
+            <div class="contact-container">
+                <form id="contact-form">
+                    <h3>Envíanos un mensaje</h3>
+                    <label for="name">Nombre</label>
+                    <input type="text" id="name" name="name" required>
+                    
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                    
+                    <label for="message">Mensaje</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                    
+                    <button type="submit" class="cta-button">Enviar</button>
+                </form>
+                <div class="contact-info">
+                    <h3>Información</h3>
+                    <p>📍 Calle del Grano Fino, 123<br>Madrid, España</p>
+                    <p>📞 +34 912 345 678</p>
+                    <p><strong>Horario:</strong><br>
+                        Lunes - Viernes: 8:00 - 20:00<br>
+                        Sábado: 9:00 - 18:00</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Cafetería El Aroma Dorado. Todos los derechos reservados.</p>
+        </footer>
+
 </body>
 </html>
