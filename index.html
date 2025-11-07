@@ -3,117 +3,354 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cafetería El Aroma Dorado</title>
+    <title>Aroma Celestial Premium - El Arte del Café de Especialidad</title>
+    
+    <meta name="description" content="Descubre Aroma Celestial, tu cafetería de especialidad. Disfruta de granos de origen único, baristas galardonados y un ambiente inolvidable.">
+    <meta name="keywords" content="café de especialidad, cafetería, barista, granos de café, latte art, cold brew, postres artesanales">
+
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>☕</text></svg>">
+
     <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&family=Montserrat:wght@300;400;700&family=Sacramento&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
 
-    <header>
-        <nav class="navbar">
-            <div class="logo">El Aroma Dorado</div>
-            <ul class="nav-links">
-                <li><a href="#hero">Inicio</a></li>
-                <li><a href="#about">Nosotros</a></li>
-                <li><a href="#menu">Menú</a></li>
-                <li><a href="#gallery">Galería</a></li>
-                <li><a href="#contact">Contacto</a></li>
+    <div id="preloader">
+        <div class="loader"></div>
+        <p>Cargando Aroma Celestial...</p>
+    </div>
+
+    <button id="theme-toggle" class="theme-toggle" aria-label="Cambiar tema (claro/oscuro)">
+        <i class="fas fa-moon"></i>
+        <i class="fas fa-sun"></i>
+    </button>
+
+    <header class="header">
+        <nav class="nav container">
+            <a href="#hero" class="logo">Aroma Celestial</a>
+            <ul class="nav-menu">
+                <li><a href="#hero" class="nav-link">Inicio</a></li>
+                <li><a href="#nosotros" class="nav-link">Historia</a></li>
+                <li><a href="#menu" class="nav-link">Menú</a></li>
+                <li><a href="#galeria" class="nav-link">Galería</a></li>
+                <li><a href="#equipo" class="nav-link">Equipo</a></li>
+                <li><a href="#testimonios" class="nav-link">Opiniones</a></li>
+                <li><a href="#blog" class="nav-link">Blog</a></li>
+                <li><a href="#contacto" class="nav-link">Contacto</a></li>
             </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
         </nav>
     </header>
 
     <main>
-
-        <section id="hero">
-            <div class="hero-content">
-                <h1 class="gradient-text">El Sabor que Despierta tus Sentidos</h1>
-                <p>Café de especialidad, repostería artesanal y un ambiente único.</p>
-                <a href="#menu" class="cta-button">Ver Menú</a>
+        <section id="hero" class="hero parallax-bg">
+            <div class="hero-content scroll-reveal">
+                <h1 class="typewriter">Descubre la esencia del café artesanal.</h1>
+                <p>Cada taza, una experiencia inigualable. Cada grano, una historia por contar.</p>
+                <a href="#menu" class="btn btn-hero">Explorar Nuestro Menú</a>
+            </div>
+            <div class="hero-scroll-indicator">
+                <span>Scroll para más</span>
+                <i class="fas fa-chevron-down"></i>
             </div>
         </section>
 
-        <section id="about" class="hidden">
-            <h2>Nuestra Pasión</h2>
-            <div class="about-content">
-                <img src="https://picsum.photos/id/225/400/300" alt="Granos de café" class="about-image">
-                <p>En "El Aroma Dorado", creemos que el café es más que una bebida; es una experiencia. Seleccionamos a mano los mejores granos de fincas sostenibles de todo el mundo. Nuestro compromiso es tostarlo a la perfección para que disfrutes de cada matiz y aroma.</p>
-            </div>
-        </section>
-
-        <section id="menu" class="hidden">
-            <h2 class="gradient-text">Nuestro Menú</h2>
-            <div class="menu-grid">
-                <div class="menu-item hidden">
-                    <img src="https://picsum.photos/id/30/300/200" alt="Espresso">
-                    <h3>Espresso Intenso</h3>
-                    <p>Un shot concentrado de nuestro blend de la casa. Pura energía.</p>
-                    <span class="price">2.50€</span>
-                </div>
-                <div class="menu-item hidden">
-                    <img src="https://picsum.photos/id/431/300/200" alt="Cappuccino">
-                    <h3>Cappuccino Cremoso</h3>
-                    <p>Equilibrio perfecto entre espresso, leche vaporizada y espuma sedosa.</p>
-                    <span class="price">3.80€</span>
-                </div>
-                <div class="menu-item hidden">
-                    <img src="https://picsum.photos/id/1060/300/200" alt="Croissant">
-                    <h3>Croissant de Mantequilla</h3>
-                    <p>Recién horneado, hojaldrado y perfecto para acompañar tu café.</p>
-                    <span class="price">2.20€</span>
-                </div>
-                 <div class="menu-item hidden">
-                    <img src="https://picsum.photos/id/1080/300/200" alt="Tarta">
-                    <h3>Tarta de Zanahoria</h3>
-                    <p>Nuestra receta secreta con un glaseado de queso crema inolvidable.</p>
-                    <span class="price">4.50€</span>
+        <section id="nosotros" class="section-padding">
+            <div class="container scroll-reveal">
+                <h2 class="section-title">Nuestra Pasión, Tu Experiencia</h2>
+                <div class="nosotros-grid">
+                    <div class="nosotros-image zoom-in">
+                        <img src="https://images.unsplash.com/photo-1511920183353-3c9c6b6c0a5d?q=80&w=1887&auto=format&fit=crop" alt="Barista profesional sirviendo café con arte latte" loading="lazy">
+                    </div>
+                    <div class="nosotros-text fade-in-left">
+                        <h3>Desde el Grano hasta tu Alma.</h3>
+                        <p>En <strong>Aroma Celestial</strong>, no solo servimos café; cultivamos una cultura. Nuestro viaje comienza en las fincas más prestigiosas del mundo, donde cada grano es seleccionado a mano por su calidad excepcional y su perfil de sabor único. Creemos firmemente en el comercio justo y en apoyar a las comunidades caficultoras que son el corazón de nuestra pasión.</p>
+                        <p>Nuestros baristas son artistas del café, maestros en el arte de la extracción y la creación de bebidas que deleitan todos los sentidos. Desde un espresso audaz hasta un latte art que te sorprenderá, cada bebida es una obra maestra elaborada con dedicación y precisión.</p>
+                        <ul class="features-list">
+                            <li><i class="fas fa-seedling"></i> Granos de Origen Sostenible</li>
+                            <li><i class="fas fa-hand-holding-heart"></i> Compromiso de Comercio Justo</li>
+                            <li><i class="fas fa-award"></i> Baristas Profesionales y Apasionados</li>
+                            <li><i class="fas fa-leaf"></i> Opciones Veganas & Sin Gluten</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <section id="gallery" class="hidden">
-            <h2>Momentos Dorados</h2>
-            <div class="gallery-grid">
-                <img src="https://picsum.photos/id/1025/400/400" alt="Perro en cafetería" class="gallery-img hidden">
-                <img src="https://picsum.photos/id/292/400/400" alt="Interior de la cafetería" class="gallery-img hidden">
-                <img src="https://picsum.photos/id/326/400/400" alt="Arte latte" class="gallery-img hidden">
-                <img src="https://picsum.photos/id/367/400/400" alt="Cliente sonriendo" class="gallery-img hidden">
-                <img src="https://picsum.photos/id/450/400/400" alt="Barista trabajando" class="gallery-img hidden">
-                <img src="https://picsum.photos/id/453/400/400" alt="Detalle de postre" class="gallery-img hidden">
+        <section id="menu" class="section-padding bg-light">
+            <div class="container scroll-reveal">
+                <h2 class="section-title">Menú de Especialidades Únicas</h2>
+                <p class="section-description">Explora una cuidada selección de cafés de autor, bebidas frías y delicias para acompañar.</p>
+                <div class="menu-filter-buttons">
+                    <button class="btn btn-filter active" data-category="todos">Todos</button>
+                    <button class="btn btn-filter" data-category="cafe_caliente">Café Caliente</button>
+                    <button class="btn btn-filter" data-category="cafe_frio">Café Frío</button>
+                    <button class="btn btn-filter" data-category="bolleria">Bollería & Postres</button>
+                </div>
+                <div class="menu-grid" id="menu-grid">
+                    </div>
             </div>
         </section>
 
-        <section id="contact" class="hidden">
-            <h2 class="gradient-text">Visítanos</h2>
-            <div class="contact-container">
-                <form id="contact-form">
-                    <h3>Envíanos un mensaje</h3>
-                    <label for="name">Nombre</label>
-                    <input type="text" id="name" name="name" required>
-                    
-                    <label for="email">Email</label>
-                    <input type="email" id="email" name="email" required>
-                    
-                    <label for="message">Mensaje</label>
-                    <textarea id="message" name="message" rows="5" required></textarea>
-                    
-                    <button type="submit" class="cta-button">Enviar</button>
-                </form>
-                <div class="contact-info">
-                    <h3>Información</h3>
-                    <p>📍 Calle del Grano Fino, 123<br>Madrid, España</p>
-                    <p>📞 +34 912 345 678</p>
-                    <p><strong>Horario:</strong><br>
-                        Lunes - Viernes: 8:00 - 20:00<br>
-                        Sábado: 9:00 - 18:00</p>
+        <section id="galeria" class="section-padding">
+            <div class="container scroll-reveal">
+                <h2 class="section-title">Momentos Capturados</h2>
+                <p class="section-description">Una ventana a la atmósfera y la belleza de Aroma Celestial.</p>
+                <div class="gallery-grid">
+                    <div class="gallery-item zoom-in"><img src="https://images.unsplash.com/photo-1497935586351-b67a49e012bf?q=80&w=2071&auto=format&fit=crop" alt="Granos de café recién tostados" loading="lazy"></div>
+                    <div class="gallery-item zoom-in"><img src="https://images.unsplash.com/photo-1541167760496-1628856ab778?q=80&w=2000&auto=format&fit=crop" alt="Interior acogedor de la cafetería" loading="lazy"></div>
+                    <div class="gallery-item zoom-in"><img src="https://images.unsplash.com/photo-1559861616-d3b5b5c9b6b7?q=80&w=1887&auto=format&fit=crop" alt="Detalle de un latte art con forma de corazón" loading="lazy"></div>
+                    <div class="gallery-item zoom-in"><img src="https://images.unsplash.com/photo-1509042239860-f550ce710d6f?q=80&w=1887&auto=format&fit=crop" alt="Vaso de café helado refrescante" loading="lazy"></div>
+                    <div class="gallery-item zoom-in"><img src="https://images.unsplash.com/photo-1447933601403-0c6688da5e21?q=80&w=1888&auto=format&fit=crop" alt="Taza de café humeante sobre una mesa de madera" loading="lazy"></div>
+                    <div class="gallery-item zoom-in"><img src="https://images.unsplash.com/photo-1542181961-9590d0c79bbd?q=80&w=1887&auto=format&fit=crop" alt="Cliente disfrutando de su café" loading="lazy"></div>
                 </div>
             </div>
         </section>
 
+        <section id="equipo" class="section-padding bg-dark text-light">
+            <div class="container scroll-reveal">
+                <h2 class="section-title text-light">Nuestro Equipo, Nuestra Familia</h2>
+                <p class="section-description text-light">Conoce a las mentes y manos detrás de cada obra de arte líquida.</p>
+                <div class="team-grid">
+                    <div class="team-member zoom-in">
+                        <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Foto de perfil de Laura García">
+                        <h3>Laura García</h3>
+                        <p>Fundadora & Maestra Tostadora</p>
+                        <div class="social-links">
+                            <a href="#" aria-label="Facebook de Laura"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" aria-label="Instagram de Laura"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                    <div class="team-member zoom-in">
+                        <img src="https://randomuser.me/api/portraits/men/44.jpg" alt="Foto de perfil de Carlos Ruíz">
+                        <h3>Carlos Ruíz</h3>
+                        <p>Barista Principal & Artista Latte</p>
+                        <div class="social-links">
+                            <a href="#" aria-label="Twitter de Carlos"><i class="fab fa-twitter"></i></a>
+                            <a href="#" aria-label="Instagram de Carlos"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                    <div class="team-member zoom-in">
+                        <img src="https://randomuser.me/api/portraits/women/79.jpg" alt="Foto de perfil de Sofía Pérez">
+                        <h3>Sofía Pérez</h3>
+                        <p>Experta en Pastelería</p>
+                        <div class="social-links">
+                            <a href="#" aria-label="Instagram de Sofía"><i class="fab fa-instagram"></i></a>
+                            <a href="#" aria-label="Pinterest de Sofía"><i class="fab fa-pinterest"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="testimonios" class="section-padding bg-light">
+            <div class="container scroll-reveal">
+                <h2 class="section-title">Lo que dicen nuestros clientes</h2>
+                <p class="section-description">Historias reales de personas que han encontrado su café perfecto.</p>
+                <div class="testimonial-carousel">
+                    <button class="carousel-nav prev" aria-label="Testimonio anterior"><i class="fas fa-chevron-left"></i></button>
+                    <div class="carousel-track-container">
+                        <div class="carousel-track">
+                            <div class="testimonial-card">
+                                <i class="fas fa-quote-left quote-icon"></i>
+                                <p>"Aroma Celestial ha transformado mi rutina matutina. Su Cold Brew es inigualable y el ambiente es simplemente mágico. ¡Mi lugar favorito!"</p>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                                </div>
+                                <h4>Ana Morales</h4>
+                                <span>Amante del café</span>
+                            </div>
+                            <div class="testimonial-card">
+                                <i class="fas fa-quote-left quote-icon"></i>
+                                <p>"Siempre busco cafés de especialidad y este lugar superó mis expectativas. El barista me ayudó a elegir un grano increíble. ¡Volveré pronto!"</p>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                                </div>
+                                <h4>Javier López</h4>
+                                <span>Explorador de sabores</span>
+                            </div>
+                             <div class="testimonial-card">
+                                <i class="fas fa-quote-left quote-icon"></i>
+                                <p>"La Tarta de Zanahoria es la mejor que he probado, y con un cappuccino, es el cielo. El personal es muy amable y el local precioso."</p>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                                </div>
+                                <h4>Marta Solís</h4>
+                                <span>Dulce Tentación</span>
+                            </div>
+                            <div class="testimonial-card">
+                                <i class="fas fa-quote-left quote-icon"></i>
+                                <p>"Un rincón perfecto para trabajar o simplemente relajarse. Tienen una variedad de cafés de origen que te transportan. ¡Muy recomendable!"</p>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                                </div>
+                                <h4>Pablo G.</h4>
+                                <span>Freelancer & Coffee Lover</span>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="carousel-nav next" aria-label="Siguiente testimonio"><i class="fas fa-chevron-right"></i></button>
+                    <div class="carousel-dots"></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="blog" class="section-padding">
+            <div class="container scroll-reveal">
+                <h2 class="section-title">El Blog de Aroma Celestial</h2>
+                <p class="section-description">Noticias, consejos y la cultura del café en profundidad.</p>
+                <div class="blog-grid">
+                    <article class="blog-post zoom-in">
+                        <img src="https://images.unsplash.com/photo-1533035338002-c38d58cf5851?q=80&w=1887&auto=format&fit=crop" alt="Mapa del mundo con granos de café señalando orígenes" loading="lazy">
+                        <h3>Explorando los Orígenes del Café</h3>
+                        <p class="post-meta">Por Laura G. | 15 Marzo, 2025</p>
+                        <p>Sumérgete con nosotros en un viaje por las regiones cafetaleras más emblemáticas del mundo y descubre la diversidad de sabores...</p>
+                        <a href="#" class="read-more" data-post-id="1">Leer más <i class="fas fa-arrow-right"></i></a>
+                    </article>
+                    <article class="blog-post zoom-in">
+                        <img src="https://images.unsplash.com/photo-1507941042781-807e78d22353?q=80&w=1887&auto=format&fit=crop" alt="Manos de un barista creando un complejo diseño de latte art" loading="lazy">
+                        <h3>El Arte Oculto del Latte Art</h3>
+                        <p class="post-meta">Por Carlos R. | 10 Marzo, 2025</p>
+                        <p>Más allá del sabor, el arte en tu taza. Nuestro barista principal comparte los secretos para crear diseños impresionantes...</p>
+                        <a href="#" class="read-more" data-post-id="2">Leer más <i class="fas fa-arrow-right"></i></a>
+                    </article>
+                    <article class="blog-post zoom-in">
+                        <img src="https://images.unsplash.com/photo-1559861616-d3b5b5c9b6b7?q=80&w=1887&auto=format&fit=crop" alt="Persona sonriente bebiendo una taza de café" loading="lazy">
+                        <h3>5 Beneficios Sorprendentes del Café</h3>
+                        <p class="post-meta">Por Sofía P. | 5 Marzo, 2025</p>
+                        <p>¿Sabías que tu bebida favorita puede ser también buena para tu salud? Descubre los sorprendentes beneficios que una taza de café...</p>
+                        <a href="#" class="read-more" data-post-id="3">Leer más <i class="fas fa-arrow-right"></i></a>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="contacto" class="section-padding bg-dark text-light parallax-bg-2">
+            <div class="container scroll-reveal">
+                <h2 class="section-title text-light">Hablemos de Café</h2>
+                <p class="section-description text-light">Estamos aquí para responder tus preguntas, escuchar tus sugerencias o simplemente saludarte.</p>
+                <div class="contacto-wrapper">
+                    <div class="contacto-info fade-in-left">
+                        <h3>Visítanos</h3>
+                        <p><i class="fas fa-map-marker-alt"></i> Calle del Grano Dorado, 42<br>Distrito Cafetero, 08001, Barcelona</p>
+                        <h3>Horario</h3>
+                        <p><i class="fas fa-clock"></i> Lunes a Viernes: 8:00 - 20:00<br>Sábados y Domingos: 9:00 - 18:00</p>
+                        <h3>Llámanos</h3>
+                        <p><i class="fas fa-phone"></i> +34 931 234 567</p>
+                        <h3>Escríbenos</h3>
+                        <p><i class="fas fa-envelope"></i> info@aromacelestial.com</p>
+                        <h3>Síguenos en Redes</h3>
+                        <div class="social-icons">
+                            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                    <form class="contact-form fade-in-right" id="contact-form" novalidate>
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" placeholder="Tu Nombre" required>
+                            <span class="error-message" id="name-error"></span>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" placeholder="Tu Email" required>
+                            <span class="error-message" id="email-error"></span>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="subject" name="subject" placeholder="Asunto" required minlength="5">
+                            <span class="error-message" id="subject-error"></span>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" name="message" rows="6" placeholder="Tu Mensaje" required minlength="10"></textarea>
+                            <span class="error-message" id="message-error"></span>
+                        </div>
+                        <button type="submit" class="btn btn-primary-alt">Enviar Mensaje <i class="fas fa-paper-plane"></i></button>
+                    </form>
+                </div>
+            </div>
+        </section>
     </main>
 
-    <footer>
-        <p>&copy; 2025 Cafetería El Aroma Dorado. Todos los derechos reservados.</p>
-        </footer>
+    <footer class="footer bg-dark text-light">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col logo-col">
+                    <a href="#hero" class="logo footer-logo">Aroma Celestial</a>
+                    <p>Tu destino para el café de especialidad y momentos inolvidables.</p>
+                </div>
+                <div class="footer-col">
+                    <h3>Enlaces Rápidos</h3>
+                    <ul>
+                        <li><a href="#hero">Inicio</a></li>
+                        <li><a href="#nosotros">Nuestra Historia</a></li>
+                        <li><a href="#menu">Nuestro Menú</a></li>
+                        <li><a href="#contacto">Contáctanos</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Horario</h3>
+                    <p>Lunes - Viernes: 8 AM - 8 PM</p>
+                    <p>Sábados - Domingos: 9 AM - 6 PM</p>
+                </div>
+                <div class="footer-col">
+                    <h3>Suscríbete</h3>
+                    <p>Recibe ofertas y noticias del mundo del café.</p>
+                    <form class="newsletter-form" id="newsletter-form">
+                        <input type="email" placeholder="Introduce tu email" aria-label="Email para newsletter" required>
+                        <button type="submit" class="btn btn-primary-alt">Suscribir</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Aroma Celestial Premium. Todos los derechos reservados. | Diseñado con <i class="fas fa-heart"></i> y <i class="fas fa-mug-hot"></i></p>
+                <div class="footer-legal">
+                    <a href="#">Política de Privacidad</a>
+                    <a href="#">Términos y Condiciones</a>
+                </div>
+            </div>
+        </div>
+    </footer>
 
+    <div id="product-modal" class="modal">
+        <div class="modal-content">
+            <button class="close-button" aria-label="Cerrar ventana">&times;</button>
+            <div id="modal-body">
+                </div>
+            <button class="btn btn-primary-alt modal-btn-buy"><i class="fas fa-shopping-cart"></i> Añadir a la Cesta</button>
+        </div>
+    </div>
+    
+    <div id="blog-modal" class="modal">
+        <div class="modal-content modal-blog-content">
+            <button class="close-button" aria-label="Cerrar artículo">&times;</button>
+            <div id="blog-modal-body">
+                </div>
+        </div>
+    </div>
+
+    <div id="easter-egg-modal" class="modal">
+        <div class="modal-content easter-egg-content">
+            <button class="close-button easter-egg-close" aria-label="Cerrar recompensa">&times;</button>
+            <h3>¡Encontraste el Secreto de la Felicidad!</h3>
+            <p>Como recompensa por tu curiosidad, disfruta de un <strong>15% de descuento</strong> en tu próxima visita. Menciona el código: <strong>AROMASECRETO</strong>.</p>
+            <p>¡Gracias por explorar más allá de lo evidente!</p>
+            <button class="btn btn-primary-alt easter-egg-btn">Entendido</button>
+        </div>
+    </div>
+
+    <button id="scroll-to-top" class="scroll-to-top" aria-label="Ir arriba">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+    
+    <div id="notification-toast" class="notification-toast"></div>
+
+    <script src="script.js"></script>
 </body>
 </html>
