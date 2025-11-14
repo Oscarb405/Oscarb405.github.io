@@ -35,6 +35,7 @@
                 <li><a href="#hero" class="nav-link">Inicio</a></li>
                 <li><a href="#nosotros" class="nav-link">Historia</a></li>
                 <li><a href="#menu" class="nav-link">Menú</a></li>
+                <li><a href="#reservas" class="nav-link">Reservas</a></li>
                 <li><a href="#galeria" class="nav-link">Galería</a></li>
                 <li><a href="#equipo" class="nav-link">Equipo</a></li>
                 <li><a href="#testimonios" class="nav-link">Opiniones</a></li>
@@ -67,7 +68,7 @@
                 <h2 class="section-title">Nuestra Pasión, Tu Experiencia</h2>
                 <div class="nosotros-grid">
                     <div class="nosotros-image zoom-in">
-                        <img src="./barista-making-coffee-stylish-shop-600nw-2528685933.jpg" alt="Barista profesional sirviendo café con arte latte" loading="lazy">
+                        <img src="./images/barista-making-coffee-stylish-shop-600nw-2528685933.jpg" alt="Barista profesional sirviendo café con arte latte" loading="lazy">
                     </div>
                     <div class="nosotros-text fade-in-left">
                         <h3>Desde el Grano hasta tu Alma.</h3>
@@ -99,17 +100,72 @@
             </div>
         </section>
 
+        <!-- ============================
+             SECCIÓN RESERVAS
+        ============================= -->
+        <section id="reservas" class="section-padding bg-light">
+            <div class="container">
+                <h2 class="section-title scroll-reveal">Haz tu Reserva</h2>
+                <p class="section-description scroll-reveal">
+                    Asegura tu mesa en Aroma Celestial y vive una experiencia inolvidable.
+                    Completa el formulario y te confirmaremos tu reserva a la brevedad.
+                </p>
+        
+                <div class="reservation-form-wrapper">
+                    <div class="reservation-form-container fade-in-left">
+                        <form id="reservation-form" class="reservation-form" novalidate>
+                            <div class="form-group">
+                                <input type="text" id="nombre-reserva" name="nombre" placeholder="Nombre Completo" required minlength="3">
+                                <div id="nombre-reserva-error" class="error-message"></div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <input type="email" id="email-reserva" name="email" placeholder="Email" required>
+                                    <div id="email-reserva-error" class="error-message"></div>
+                                </div>
+                                <div class="form-group">
+                                    <input type="tel" id="telefono-reserva" name="telefono" placeholder="Teléfono (Opcional)">
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <select id="personas" name="personas" required>
+                                        <option value="">Nº de personas</option>
+                                        <option value="1">1 persona</option>
+                                        <option value="2">2 personas</option>
+                                        <option value="3">3 personas</option>
+                                        <option value="4">4 personas</option>
+                                        <option value="5">5 personas</option>
+                                        <option value="6">6+ personas</option>
+                                    </select>
+                                    <div id="personas-error" class="error-message"></div>
+                                </div>
+                                <div class="form-group">
+                                    <input type="date" id="fecha" name="fecha" required>
+                                    <div id="fecha-error" class="error-message"></div>
+                                </div>
+                            </div>
+                            <button type="submit" class="btn btn-primary-alt">Confirmar Reserva</button>
+                        </form>
+                    </div>
+                    <div class="reservation-image fade-in-right">
+                        <img src="images/alena-plotnikova-mAHzkCjWc20-unsplash.jpg" alt="Interior acogedor de la cafetería Aroma Celestial">
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <section id="galeria" class="section-padding">
             <div class="container scroll-reveal">
                 <h2 class="section-title">Momentos Capturados</h2>
                 <p class="section-description">Una ventana a la atmósfera y la belleza de Aroma Celestial.</p>
                 <div class="gallery-grid">
-                    <div class="gallery-item zoom-in"><img src="GALERIA1.jpg  " alt="Granos de café recién tostados" loading="lazy"></div>
-                    <div class="gallery-item zoom-in"><img src="PROYECTO2.jpg" alt="Interior acogedor de la cafetería" loading="lazy"></div>
-                    <div class="gallery-item zoom-in"><img src="Galeria3.jpg" alt="Detalle de un latte art con forma de corazón" loading="lazy"></div>
-                    <div class="gallery-item zoom-in"><img src="Galeria4.jpg" alt="Vaso de café helado refrescante" loading="lazy"></div>
-                    <div class="gallery-item zoom-in"><img src="https://images.unsplash.com/photo-1447933601403-0c6688da5e21?q=80&w=1888&auto=format&fit=crop" alt="Taza de café humeante sobre una mesa de madera" loading="lazy"></div>
-                    <div class="gallery-item zoom-in"><img src="https://images.unsplash.com/photo-1542181961-9590d0c79bbd?q=80&w=1887&auto=format&fit=crop" alt="Cliente disfrutando de su cafée" loading="lazy"></div>
+                    <div class="gallery-item zoom-in"><img src="images/galeria/ante-samarzija-lsmu0rUhUOk-unsplash.jpg" alt="Granos de café recién tostados" loading="lazy"></div>
+                    <div class="gallery-item zoom-in"><img src="images/galeria/jon-tyson-pEGyLHAPfVw-unsplash.jpg" alt="Interior acogedor de la cafetería" loading="lazy"></div>
+                    <div class="gallery-item zoom-in"><img src="images/galeria/jonathan-borba-21tOEaJPM_o-unsplash.jpg" alt="Detalle de un latte art con forma de corazón" loading="lazy"></div>
+                    <div class="gallery-item zoom-in"><img src="images/galeria/leohoho-uskQ8hyZNgQ-unsplash.jpg" alt="Vaso de café helado refrescante" loading="lazy"></div>
+                    <div class="gallery-item zoom-in"><img src="images/galeria/nathan-dumlao-2z3MOB3kfJU-unsplash.jpg" alt="Taza de café humeante sobre una mesa de madera" loading="lazy"></div>
+                    <div class="gallery-item zoom-in"><img src="images/galeria/nathan-dumlao-zUNs99PGDg0-unsplash.jpg" alt="Cliente disfrutando de su cafée" loading="lazy"></div>
                 </div>
             </div>
         </section>
@@ -208,21 +264,21 @@
                 <p class="section-description">Noticias, consejos y la cultura del café en profundidad.</p>
                 <div class="blog-grid">
                     <article class="blog-post zoom-in">
-                        <img src="https://images.unsplash.com/photo-1533035338002-c38d58cf5851?q=80&w=1887&auto=format&fit=crop" alt="Mapa del mundo con granos de café señalando orígenes" loading="lazy">
+                        <img src="images/blog/battlecreek-coffee-roasters-mY4hAwxNA_0-unsplash.jpg" alt="Mapa del mundo con granos de café señalando orígenes" loading="lazy">
                         <h3>Explorando los Orígenes del Café</h3>
                         <p class="post-meta">Por Laura G. | 15 Marzo, 2025</p>
                         <p>Sumérgete con nosotros en un viaje por las regiones cafetaleras más emblemáticas del mundo y descubre la diversidad de sabores...</p>
                         <a href="#" class="read-more" data-post-id="1">Leer más <i class="fas fa-arrow-right"></i></a>
                     </article>
                     <article class="blog-post zoom-in">
-                        <img src="https://images.unsplash.com/photo-1507941042781-807e78d22353?q=80&w=1887&auto=format&fit=crop" alt="Manos de un barista creando un complejo diseño de latte art" loading="lazy">
+                        <img src="images/blog/tabitha-turner-3n3mPoGko8g-unsplash.jpg" alt="Manos de un barista creando un complejo diseño de latte art" loading="lazy">
                         <h3>El Arte Oculto del Latte Art</h3>
                         <p class="post-meta">Por Carlos R. | 10 Marzo, 2025</p>
                         <p>Más allá del sabor, el arte en tu taza. Nuestro barista principal comparte los secretos para crear diseños impresionantes...</p>
                         <a href="#" class="read-more" data-post-id="2">Leer más <i class="fas fa-arrow-right"></i></a>
                     </article>
                     <article class="blog-post zoom-in">
-                        <img src="https://images.unsplash.com/photo-1559861616-d3b5b5c9b6b7?q=80&w=1887&auto=format&fit=crop" alt="Persona sonriente bebiendo una taza de café" loading="lazy">
+                        <img src="images/blog/marcelo-de-la-torre-gkP1Zp3yZR8-unsplash.jpg" alt="Persona sonriente bebiendo una taza de café" loading="lazy">
                         <h3>5 Beneficios Sorprendentes del Café</h3>
                         <p class="post-meta">Por Sofía P. | 5 Marzo, 2025</p>
                         <p>¿Sabías que tu bebida favorita puede ser también buena para tu salud? Descubre los sorprendentes beneficios que una taza de café...</p>

@@ -268,8 +268,68 @@ document.addEventListener('DOMContentLoaded', () => {
         document.querySelectorAll('.scroll-reveal, .zoom-in, .fade-in-left, .fade-in-right').forEach(el => observer.observe(el));
     };
 
-    // --- 10. VALIDACIÓN FORMULARIO DE CONTACTO Y NEWSLETTER ---
+    // --- 10. SISTEMA DE RESERVAS ---
+    const reservationForm = document.getElementById('reservation-form');
+    if (reservationForm) {
+        const dateInput = document.getElementById('fecha');
+        const today = new Date().toISOString().split('T')[0];
+        dateInput.setAttribute('min', today);
+
+        reservationForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            let isValid = true;
+            const requiredInputs = reservationForm.querySelectorAll('[required]');
+            
+            requiredInputs.forEach(input => {
+                if (!validateInput(input)) isValid = false;
+            });
+
+            if (isValid) {
+                // Simulación de envío a backend
+                showNotification('Procesando tu reserva...');
+                setTimeout(() => {
+                    showNotification('¡Reserva confirmada! Te hemos enviado un email con los detalles.');
+                    reservationForm.reset();
+                    dateInput.setAttribute('min', today); // Re-aplicar el mínimo después de resetear
+                }, 2000);
+            } else {
+                showNotification('Por favor, revisa los campos del formulario.', true);
+            }
+        });
+
+        reservationForm.querySelectorAll('[required]').forEach(input => {
+            input.addEventListener('input', () => validateInput(input));
+        });
+    }
+
+    // --- 11. VALIDACIÓN FORMULARIO DE CONTACTO Y NEWSLETTER ---
     const contactForm = document.getElementById('contact-form');
+    
+    // Función de validación genérica (reutilizada por ambos formularios)
+    function validateInput(input) {
+        let valid = true;
+        const errorEl = document.getElementById(`${input.id}-error`);
+        input.classList.remove('error');
+        if (errorEl) errorEl.textContent = '';
+
+        if (input.value.trim() === '') {
+            if (errorEl) errorEl.textContent = 'Este campo es obligatorio.';
+            valid = false;
+        } else if (input.type === 'email' && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(input.value)) {
+            if (errorEl) errorEl.textContent = 'Por favor, introduce un email válido.';
+            valid = false;
+        } else if (input.hasAttribute('min') && input.value < input.getAttribute('min')) {
+            if (errorEl) errorEl.textContent = 'La fecha no puede ser en el pasado.';
+            valid = false;
+        } else if (input.minLength && input.value.length < input.minLength) {
+            if (errorEl) errorEl.textContent = `Debe tener al menos ${input.minLength} caracteres.`;
+            valid = false;
+        }
+
+        if (!valid) input.classList.add('error');
+        return valid;
+    }
+
     if (contactForm) {
         const inputs = contactForm.querySelectorAll('input[required], textarea[required]');
         contactForm.addEventListener('submit', function(e) {
@@ -287,27 +347,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
 
         inputs.forEach(input => input.addEventListener('input', () => validateInput(input)));
-
-        function validateInput(input) {
-            let valid = true;
-            input.classList.remove('error');
-            const errorEl = document.getElementById(`${input.id}-error`);
-            errorEl.textContent = '';
-
-            if (input.value.trim() === '') {
-                errorEl.textContent = 'Este campo es obligatorio.';
-                valid = false;
-            } else if (input.type === 'email' && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(input.value)) {
-                errorEl.textContent = 'Por favor, introduce un email válido.';
-                valid = false;
-            } else if (input.minLength && input.value.length < input.minLength) {
-                errorEl.textContent = `Debe tener al menos ${input.minLength} caracteres.`;
-                valid = false;
-            }
-
-            if (!valid) input.classList.add('error');
-            return valid;
-        }
     }
     
     const newsletterForm = document.getElementById('newsletter-form');
@@ -322,7 +361,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // --- 11. NOTIFICACIONES (TOAST) ---
+    // --- 12. NOTIFICACIONES (TOAST) ---
     const notificationToast = document.getElementById('notification-toast');
     function showNotification(message, isError = false) {
         notificationToast.textContent = message;
@@ -331,7 +370,7 @@ document.addEventListener('DOMContentLoaded', () => {
         setTimeout(() => notificationToast.classList.remove('show'), 3000);
     }
 
-    // --- 12. EASTER EGG (KONAMI CODE) ---
+    // --- 13. EASTER EGG (KONAMI CODE) ---
     const konamiCode = ['ArrowUp', 'ArrowUp', 'ArrowDown', 'ArrowDown', 'ArrowLeft', 'ArrowRight', 'ArrowLeft', 'ArrowRight', 'b', 'a'];
     let konamiIndex = 0;
     const easterEggModal = document.getElementById('easter-egg-modal');

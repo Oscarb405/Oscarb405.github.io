@@ -275,6 +275,24 @@ body.dark-theme .flavor-bar label { color: #ccc; }
 input.error, textarea.error { border-color: var(--error-color) !important; }
 input.error + .error-message, textarea.error + .error-message { display: block; }
 
+/* --- Sección Reservas --- */
+.reservation-form-wrapper { display: grid; grid-template-columns: 1.2fr 1fr; gap: 4rem; align-items: center; }
+.reservation-image img { width: 100%; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
+.reservation-form .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+.reservation-form input, .reservation-form select, .reservation-form textarea { width: 100%; padding: 14px 18px; background-color: var(--bg-light-color); border: 1px solid var(--border-color); border-radius: 8px; color: var(--text-dark-color); font-family: var(--font-body); font-size: 1rem; transition: border-color 0.3s ease, box-shadow 0.3s ease; }
+.reservation-form input:focus, .reservation-form select:focus, .reservation-form textarea:focus { outline: none; border-color: var(--accent-color); box-shadow: 0 0 0 3px rgba(198, 137, 64, 0.2); }
+body.dark-theme .reservation-form input, body.dark-theme .reservation-form select, body.dark-theme .reservation-form textarea { background-color: #2a2a2a; border-color: #444; color: var(--dark-text-color); }
+body.dark-theme .reservation-form input::placeholder, body.dark-theme .reservation-form textarea::placeholder { color: #888; }
+body.dark-theme .reservation-form input:focus, body.dark-theme .reservation-form select:focus, body.dark-theme .reservation-form textarea:focus { border-color: var(--dark-primary-color); }
+.reservation-form .btn { width: 100%; margin-top: 1rem; }
+
+.reservation-form input.error + .error-message, .reservation-form select.error + .error-message { display: block; }
+
+@media (max-width: 992px) {
+    .reservation-form-wrapper { grid-template-columns: 1fr; }
+    .reservation-image { display: none; } /* Ocultar imagen en tablets y móviles para dar espacio al form */
+}
+
 /* --- Footer --- */
 .footer { padding: 4rem 0 2rem; }
 .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 2.5rem; margin-bottom: 3rem; padding-bottom: 2rem; border-bottom: 1px solid rgba(255,255,255,0.1); }
